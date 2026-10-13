@@ -1,74 +1,105 @@
-# 🎓 Student Management System
+# Student Management System
 
-A Java console application to manage student records using **JDBC**, **DAO pattern**, and **Service Layer** with MySQL database.
+A simple **Student Management System** developed using Java and MySQL to manage student records efficiently. This project demonstrates Java programming, database connectivity using JDBC, and CRUD operations.
 
----
+## 📌 Project Overview
 
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Language | Java |
-| Database | MySQL |
-| Connectivity | JDBC |
-| Pattern | DAO + Service Layer |
-| IDE | Eclipse |
-
----
-
-## 📂 Project Structure
-
-```
-StudentManagement/
-├── connection/
-│   └── DBConnection.java         → MySQL database connection
-├── entity/
-│   └── Student.java              → Student model class
-├── dao/
-│   └── StudentDAO.java           → DAO interface
-├── service/
-│   └── StudentService.java       → Service interface
-├── serviceimpl/
-│   ├── StudentDAOImpl.java       → JDBC CRUD implementation
-│   └── StudentServiceImpl.java   → Service layer implementation
-├── main/
-│   └── Main.java                 → Main program entry point
-└── student_db.sql                → MySQL database setup script
-```
-
----
+The Student Management System is a console-based application that allows users to manage student information through a menu-driven interface. It connects to a MySQL database to store and retrieve student records.
 
 ## ✨ Features
 
-- ➕ Add new student
-- 📋 View all students
-- 🔍 Search student by ID
-- ✏️ Update student details
-- 🗑️ Delete student
+- **Add Student** – Add new student details to the database.
+- **View All Students** – Display all registered student records.
+- **Search Student** – Find a student using their ID.
+- **Update Student** – Modify existing student information.
+- **Delete Student** – Remove a student record from the database.
+- **MySQL Connectivity** – Store and manage student data persistently.
 
----
+## 🛠️ Technologies Used
 
-## ⚙️ How to Run
+- Java
+- MySQL
+- JDBC (Java Database Connectivity)
+- MySQL Connector/J
+- Visual Studio Code
+- Git and GitHub
 
-**Step 1 — Setup Database:**
-```sql
--- Run this in MySQL Workbench or terminal
-source student_db.sql
+## 📂 Project Structure
+
+```text
+Student-Management-System/
+├── main/
+│   └── Main.java
+├── entity/
+│   └── Student.java
+├── service/
+│   └── StudentService.java
+├── serviceimpl/
+│   └── StudentServiceImpl.java
+├── run.ps1
+├── .gitignore
+└── README.md
 ```
 
-**Step 2 — Update DB credentials in `DBConnection.java`:**
-```java
-private static final String URL = "jdbc:mysql://localhost:3306/student_db";
-private static final String USERNAME = "root";
-private static final String PASSWORD = "your_password";  // ← change this
+*Note: The exact folder structure may vary depending on the project setup.*
+
+## ⚙️ Prerequisites
+
+Before running the project, make sure you have installed:
+
+- Java JDK
+- MySQL Server
+- Visual Studio Code
+- MySQL Connector/J
+
+## 🚀 How to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sirireddy2/Student-Management-System.git
+   ```
+
+2. Open the project folder in Visual Studio Code.
+
+3. Start your MySQL Server and create the required database and student table according to the project configuration.
+
+4. Configure the database connection details in the database connection class.
+
+5. Ensure the MySQL Connector/J `.jar` file is available in the project folder.
+
+6. Open the terminal in the project directory and run:
+
+   ```powershell
+   .\run.ps1
+   ```
+
+7. Use the menu displayed in the terminal to manage student records.
+
+## 🧑‍💻 Application Menu
+
+```text
+===== Student Management System =====
+1. Add Student
+2. View All Students
+3. Search Student by ID
+4. Update Student
+5. Delete Student
+6. Exit
 ```
 
-**Step 3 — Add MySQL connector JAR** to your project build path
+## 🎯 Learning Outcomes
 
-**Step 4 — Run `Main.java`**
+- Understanding Java classes, objects, and packages.
+- Implementing CRUD operations.
+- Connecting Java applications to MySQL using JDBC.
+- Managing student records using database queries.
+- Running and maintaining Java projects in VS Code.
+- Using Git and GitHub for version control.
 
----
+## 👩‍💻 Author
 
-## 👩‍💻 Developer
+Siri Reddy
 
-Made with ❤️ by [suma-dev-12](https://github.com/suma-dev-12)
+B.Tech – Computer Science and Engineering (AI & ML)
+
